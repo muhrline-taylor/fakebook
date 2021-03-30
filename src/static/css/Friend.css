@@ -1,0 +1,31 @@
+.friend {
+    height: 40px;
+    margin-top: 4px;
+    display: flex;
+    border-radius: 12px;
+    transition: 100ms ease-in;
+}
+
+.friend:hover {
+    background-color: #65676b31;
+    cursor: pointer;
+}
+
+.friend__pic {
+    display: flex;
+    width: 10%;
+}
+
+.friend__pic > img {
+    object-fit: contain;
+}
+
+.friend__name {
+    display: flex;
+    align-items: center;
+}
+
+.friend__name > p {
+    color: gray;
+    margin-left: 20px;
+}

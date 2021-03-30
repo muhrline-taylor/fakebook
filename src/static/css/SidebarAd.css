@@ -1,0 +1,33 @@
+.sidebarAd {
+    height: 40%;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 12px;
+    transition: 100ms ease-in-out
+}
+
+.sidebarAd:hover {
+    background-color: #d8dadfbd;
+}
+
+.sidebarAd__pic {
+    height: 90%;
+    width: 40%;
+    display: flex;
+}
+
+.sidebarAd__pic > img {
+    object-fit: contain;
+}
+
+.sidebarAd__content {
+    height: 50%;
+    width: 60%;
+}
+
+.sidebarAd__content > a{
+    color: rgb(95, 95, 95);
+    text-decoration: none;
+}

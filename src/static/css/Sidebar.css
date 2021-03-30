@@ -1,0 +1,49 @@
+.sidebar {
+    height: 92vh;
+    width: 70%;
+    padding-top: 10px;
+}
+
+.sidebar__options {
+    border-bottom: 1px solid lightgray;
+    height: 60vh;
+}
+
+.sidebar__option {
+    height: 7%;
+    margin: 2px 0 0 8px;
+    padding: 13px 0 0 0;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sidebar__option:hover {
+    background-color: #E4E6E9;
+    transition: 100ms ease-in-out;
+}
+
+.sidebar__option > h4 {
+    margin-left: 12px;
+}
+
+.sidebar__shortcuts {
+    height: 250px;
+}
+
+.sidebar__shortcutsHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+.sidebar__shortcutsHeaderP {
+    display: none;
+}
+
+.sidebar__shortcutsHeader:hover .sidebar__shortcutsHeaderP {
+    display: block;
+    color: #1977F2 !important;
+    cursor: pointer;
+}
+

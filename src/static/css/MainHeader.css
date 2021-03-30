@@ -1,0 +1,120 @@
+.mainHeader {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainHeader__left {
+    flex: 0.16;
+    display: flex;
+}
+
+.mainHeader__left > img {
+    height: 45px;
+    margin-top: 5px;
+}
+
+.mainHeader__leftInput {
+    background-color: #F0F2F5;
+    flex: 1;
+    margin: 8px 0 3px 0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.mainHeader__leftInput > .MuiSvgIcon-root {
+    color: gray;
+}
+
+.mainHeader__leftInput > input {
+    flex: 1;
+    background: transparent;
+    border: none;
+}
+
+.mainHeader__leftInput > input:focus {
+    outline: none;
+}
+
+.mainHeader__center {
+    flex: 0.4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mainHeader__centerIcon > .MuiSvgIcon-root {
+    margin-top: 9px;
+    color: gray;
+}
+
+.mainHeader__centerIcon--active {
+    border-bottom: 4px solid #1977F2;
+    flex: 0.2;
+}
+
+.mainHeader__centerIcon {
+    flex: 0.2;
+    display: flex;
+    justify-content: space-around;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.mainHeader__centerIcon:hover {
+    background-color: #F2F2F2;
+    transition: color 100ms ease-out;
+}
+
+.mainHeader__centerIcon--active:hover {
+    transition: color 100ms ease-out;
+}
+
+.mainHeader__centerIcon--active > .MuiSvgIcon-root {
+    margin-top: 9px;
+    color: #1977F2;
+}
+
+.mainHeader__center > .MuiSvgIcon-root:hover {
+    color: #1977F2 !important;
+    cursor: pointer;
+}
+
+.mainHeader__right {
+    flex: 0.15;
+    padding-top: 7px;
+    display: flex;
+}
+
+.mainHeader__rightAvatar {
+    width: 36%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.mainHeader__rightAvatar:hover {
+    background-color: #F2F2F2;
+}
+
+.mainHeader__rightAvatar > p {
+    margin-left: 6px;
+    font-weight: 250;
+}
+
+.mainHeader__rightIcon {
+    width: 12%;
+    height: 90%;
+    margin: 2px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 24px;
+    background-color: #F2F2F2;
+}
+
+.mainHeader__rightIcon:hover {
+    background-color: #D8DADF;
+}

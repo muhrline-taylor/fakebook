@@ -1,0 +1,32 @@
+
+
+.landing {
+    height: 97.5vh;
+    width: 100vw;
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    background-color: rgba(228, 228, 228, 0.671);
+    overflow-x: hidden;
+}
+
+.landing__header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.landing__header > img {
+    height: 150px;
+}
+
+.landing__main {
+    flex: 1;
+    margin: 20px 200px;
+}
+
+.landing__mainHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

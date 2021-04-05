@@ -8,9 +8,22 @@ import { currentUser } from '../features/userSlice';
 import Sidebar from "./Sidebar";
 import Feed from './Feed';
 import RightSidebar from './RightSidebar';
+import { changeSidebar, selectSidebar } from '../features/sidebarSlice';
+import Friends from './Friends';
+import Groups from './Groups';
+import Marketplace from './Marketplace';
+import Watch from './Watch';
+import Events from './Events';
+import Memories from './Memories';
+import Saved from './Saved';
+import Pages from './Pages';
+import FriendsSidebar from './FriendsSidebar';
+import GroupsSidebar from './GroupsSidebar';
+import MarketplaceSidebar from './MarketplaceSidebar';
 
 const Main = () => {
     const dispatch = useDispatch();
+    const sidebar = useSelector(selectSidebar);
 
     useEffect(() => {
         if(localStorage.getItem("loggedInUser") === null){
@@ -20,8 +33,13 @@ const Main = () => {
                 .then(res => {
                     dispatch(currentUser(res.data))
                 })
+            if(sidebar === ""){
+                dispatch(changeSidebar("feed"))
+            }
         }
     })
+
+    
     return (
         <div className="main">
             <div className="main__header">
@@ -30,15 +48,83 @@ const Main = () => {
             </div>
             <div className="main__body">
                 <div className="main__bodySidebar">
-                    <Sidebar />
+                    {
+                        sidebar === "" || sidebar === "feed" ?
+                        <Sidebar />
+                        :""
+                    }
+                    {
+                        sidebar === "friends" ?
+                        <FriendsSidebar />
+                        :""
+                    }
+                    {
+                        sidebar === "groups" ?
+                        <GroupsSidebar />
+                        :""
+                    }
+                    {
+                        sidebar === "marketplace" ?
+                        <MarketplaceSidebar />
+                        :""
+                    }
                 </div>
 
                 <div className="main__bodyCenter">
-                    <Feed />
+                    {
+                        sidebar === "" || sidebar === "feed" ?
+                        <Feed />:
+                        ""
+                    }
+                    {
+                        sidebar === "friends" ?
+                        <Friends />
+                        :""
+                    }
+                    {
+                        sidebar === "groups" ?
+                        <Groups />
+                        :""
+                    }
+                    {
+                        sidebar === "marketplace" ?
+                        <Marketplace />
+                        :""
+                    }
+                    {
+                        sidebar === "watch" ?
+                        <Watch />
+                        :""
+                    }
+                    {
+                        sidebar === "events" ?
+                        <Events />
+                        :""
+                    }
+                    {
+                        sidebar === "memories" ?
+                        <Memories />
+                        :""
+                    }
+                    {
+                        sidebar === "saved" ?
+                        <Saved />
+                        :""
+                    }
+                    {
+                        sidebar === "pages" ?
+                        <Pages />
+                        :""
+                    }
                 </div>
 
                 <div className="main__bodyRightSidebar">
-                    <RightSidebar />
+                    {
+                        sidebar === "feed" || sidebar === "" ?
+                        <RightSidebar />
+                        :""
+                    }
+                    
                 </div>
             </div>
             

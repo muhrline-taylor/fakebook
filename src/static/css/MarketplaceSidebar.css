@@ -1,0 +1,59 @@
+.marketplaceSidebar {
+    background-color: #FFFFFF;
+    height: 92vh;
+    width: 72%;
+    border-right: 1px solid lightgray;
+    padding: 10px 0 0 15px;
+}
+
+.marketplaceSidebar__header {
+    border-bottom: 1px solid lightgray;
+    height: 10vh;
+    margin: -1% 15px 0 0;
+}
+
+.marketplaceSidebar__headerTop {
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    align-items: center;
+}
+
+.marketplaceSidebar__headerTop--settings {
+    background-color: #D8DADF;
+    border-radius: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 11%;
+}
+
+.marketplaceSidebar__headerTop--settings:hover {
+    background-color: #c9cbcf;
+    cursor: pointer;
+}
+
+.marketplaceSidebar__headerSearch {
+    height: 40%;
+    margin-top: 3%;
+    border-radius: 20px;
+    background-color: #F0F2F5;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.marketplaceSidebar__headerSearch > .MuiSvgIcon-root {
+    color: gray;
+}
+
+.marketplaceSidebar__headerSearch > input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+}
+
+.marketplaceSidebar__headerSearch > input:focus {
+    outline: none;
+}

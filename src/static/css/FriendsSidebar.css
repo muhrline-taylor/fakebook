@@ -1,0 +1,65 @@
+.friendsSidebar {
+    height: 92vh;
+    margin-right: 23%;
+    background-color: #FFFFFF;
+    overflow-y: scroll;
+    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.123);
+}
+
+.friendsSidebar__header {
+    height: 6%;
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.friendsSidebar__header--settings {
+    background-color: #D8DADF;
+    height: 70%;
+    width: 11%;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.friendsSidebar__header--settings:hover {
+    background-color: #c9cbcf;
+}
+
+.friendsSidebar__requests {
+    border-bottom: 1px solid lightgray;
+    height: 47%;
+    margin-right: 3%;
+}
+
+.friendsSidebar__requests--header {
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.friendsSidebar__requests--header > p {
+    color: #1770E6;
+    cursor: pointer;
+}
+
+.friendsSidebar__requests--footer {
+    height: 11%;
+    margin-top: 3%;
+    display: flex;
+}
+
+.friendsSidebar__requests--footer > Button {
+    object-fit: fill;
+}
+
+.friendsSidebar__suggestions {
+    margin-top: 1%;
+    padding: 0 2%;
+}
+
+.friendsSidebar__suggestionsHeader {
+
+}

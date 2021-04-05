@@ -14,6 +14,10 @@
     margin-top: 5px;
 }
 
+.mainHeader__left > img:hover {
+    cursor: pointer;
+}
+
 .mainHeader__leftInput {
     background-color: #F0F2F5;
     flex: 1;
@@ -65,10 +69,12 @@
 .mainHeader__centerIcon:hover {
     background-color: #F2F2F2;
     transition: color 100ms ease-out;
+    cursor: pointer;
 }
 
 .mainHeader__centerIcon--active:hover {
     transition: color 100ms ease-out;
+    cursor: pointer;
 }
 
 .mainHeader__centerIcon--active > .MuiSvgIcon-root {
@@ -79,10 +85,11 @@
 .mainHeader__center > .MuiSvgIcon-root:hover {
     color: #1977F2 !important;
     cursor: pointer;
+    cursor: pointer;
 }
 
 .mainHeader__right {
-    flex: 0.15;
+    flex: 0.2;
     padding-top: 7px;
     display: flex;
 }
@@ -97,6 +104,7 @@
 
 .mainHeader__rightAvatar:hover {
     background-color: #F2F2F2;
+    cursor: pointer;
 }
 
 .mainHeader__rightAvatar > p {
@@ -117,4 +125,5 @@
 
 .mainHeader__rightIcon:hover {
     background-color: #D8DADF;
+    cursor: pointer;
 }

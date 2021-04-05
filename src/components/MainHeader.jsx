@@ -6,7 +6,7 @@ import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import GroupIcon from '@material-ui/icons/Group';
 import WidgetsIcon from '@material-ui/icons/Widgets';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectUserList } from '../features/userSlice';
 import { Avatar } from '@material-ui/core';
 import axios from 'axios';
@@ -15,11 +15,14 @@ import AddIcon from '@material-ui/icons/Add';
 import MessageIcon from '@material-ui/icons/Message';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { changeSidebar, selectSidebar } from '../features/sidebarSlice';
 
 const MainHeader = ({  }) => {
     const [searchInput, setSearchInput] = useState("");
     const [isActive, setIsActive] = useState("home");
     const [user, setUser] = useState({});
+    const dispatch = useDispatch();
+    const selected = useSelector(selectSidebar)
 
     
 
@@ -33,6 +36,7 @@ const MainHeader = ({  }) => {
                 })
         }
     },[])
+
 
     return (
         <div className="mainHeader">
@@ -51,15 +55,17 @@ const MainHeader = ({  }) => {
             
             <div className="mainHeader__center">
                 <div 
-                    className={`mainHeader__centerIcon ${isActive === "home" && 'mainHeader__centerIcon--active'}`}
-                    onClick={() => setIsActive("home")}
+                    className={`mainHeader__centerIcon ${selected === "feed" && 'mainHeader__centerIcon--active'}`}
+                    onClick={() => {
+                        dispatch(changeSidebar("feed"))
+                    }}
                 >
                     <HomeIcon fontSize="large"/>
                 </div>
 
                 <div 
-                    className={`mainHeader__centerIcon ${isActive === "subscriptions" && 'mainHeader__centerIcon--active'}`}
-                    onClick={() => setIsActive("subscriptions")}
+                    className={`mainHeader__centerIcon ${selected === "subscriptions" && 'mainHeader__centerIcon--active'}`}
+                    onClick={() => dispatch(changeSidebar("subscriptions"))}
                 >
                     <SubscriptionsIcon fontSize="large"/>
                 </div>

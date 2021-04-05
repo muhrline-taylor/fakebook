@@ -8,24 +8,29 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import Friend from './Friend';
 
 const RightSidebar = () => {
+    const url = "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
+
     const [friends, setFriends] = useState([
-        {"Joe": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Jane": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Jack": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Frank": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Jill": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Bob": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Donnie": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Billy": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Sarah": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Isaac": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Joe": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Amanda": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Stacy": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Julie": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Tyler": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Darby": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"},
-        {"Corey": "https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"}
+        {"Caitlin": url},
+        {"Grace": url},
+        {"Joe": url},
+        {"Gina": url},
+        {"Jane": url},
+        {"Jack": url},
+        {"Frank": url},
+        {"Jill": url},
+        {"Bob": url},
+        {"Donnie": url},
+        {"Billy": url},
+        {"Sarah": url},
+        {"Isaac": url},
+        {"Jan": url},
+        {"Amanda": url},
+        {"Stacy": url},
+        {"Julie": url},
+        {"Tyler": url},
+        {"Darby": url},
+        {"Corey": url}
     ])
 
     return (

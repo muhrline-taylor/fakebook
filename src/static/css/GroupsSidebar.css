@@ -1,0 +1,157 @@
+.groupsSidebar {
+    background-color: #FFFFFF;
+    height: 92vh;
+    width: 72%;
+    border-right: 1px solid lightgray;
+    padding: 10px 0 0 15px;
+}
+
+.groupsSidebar__top {
+    border-bottom: 1px solid lightgray;
+    height: 34%;
+}
+
+.groupsSidebar__topHeader {
+    display: flex;
+    width: 95%;
+    height: 14%;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.groupsSidebar__topHeader > h2 {
+    margin-top: -8px;
+}
+
+.groupsSidebar__topHeader--settings {
+    height: 83%;
+    width: 12%;
+    background-color: #D8DADF;
+    border-radius: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -4px;
+}
+
+.groupsSidebar__topHeader--settings:hover {
+    background-color: #c9cbcf;
+    cursor: pointer;
+}
+
+.groupsSidebar__topBody {
+    height: 84%;
+}
+
+.groupsSidebar__topBody--search {
+    background-color: #F0F2F5;
+    height: 13%;
+    width: 93%;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 2%;
+    margin-bottom: 5%;
+}
+
+.groupsSidebar__topBody--search > .MuiSvgIcon-root {
+    color: gray;
+}
+
+.groupsSidebar__topBody--search > input {
+    flex: 1;
+    border: none;
+    opacity: transparent;
+    background: none;
+}
+
+.groupsSidebar__topBody--search > input:focus {
+    outline: none;
+}
+
+.groupsSidebar__topBody--sidebar {
+    height: 20%;
+    border-radius: 8px;
+    margin: 0 10px 0 -7px;
+    display: flex;
+    align-items: center;
+    padding: 1px 0 1px 0
+}
+
+.groupsSidebar__topBody--sidebarActive {
+    background-color: #EAF3FF !important;
+    display: flex;
+    align-items: center;
+    height: 20%;
+    border-radius: 8px;
+    margin: 0 10px 0 -7px;
+}
+
+.groupsSidebar__topBody--sidebarImgActive {
+    background-color: #1977F2 !important;
+    height: 75%;
+    width: 10%;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.groupsSidebar__topBody--sidebarImgActive > .MuiSvgIcon-root {
+    color: white;
+}
+
+.groupsSidebar__topBody--sidebar:hover {
+    background-color: #F2F2F2;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.groupsSidebar__topBody--sidebarImg {
+    background-color: #D8DADF;
+    height: 75%;
+    width: 10%;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.groupsSidebar__topBody--sidebar > p {
+    font-weight: 500;
+}
+
+.groupsSidebar__topBody--button {
+    height: 16%;
+    margin: 0 10px 0 0;
+    background-color: #EAF3FF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.groupsSidebar__topBody--button:hover {
+    background-color: #DBE7F2 !important;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.groupsSidebar__topBody--button > p {
+    font-weight: 500;
+    color: #1771E6;
+}
+
+.groupsSidebar__bottom {
+    margin-top: 5%;
+    height: 59vh;
+    width: 98%;
+    overflow-y: scroll !important;
+}
+
+.groupsSidebar__bottomHeader > p {
+    font-weight: 500;
+    font-size: 20px;
+}

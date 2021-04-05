@@ -18,6 +18,10 @@
     border-radius: 10px;
 }
 
+.sidebar__option--active {
+    background-color: black !important;
+}
+
 .sidebar__option:hover {
     background-color: #E4E6E9;
     transition: 100ms ease-in-out;

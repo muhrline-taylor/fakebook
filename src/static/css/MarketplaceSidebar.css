@@ -9,7 +9,7 @@
 .marketplaceSidebar__header {
     border-bottom: 1px solid lightgray;
     height: 10vh;
-    margin: -1% 15px 0 0;
+    margin: -1% 15px 1% 0;
 }
 
 .marketplaceSidebar__headerTop {
@@ -56,4 +56,66 @@
 
 .marketplaceSidebar__headerSearch > input:focus {
     outline: none;
+}
+
+.marketplaceSidebar__bodyTabs {
+    border-bottom: 1px solid lightgray;
+    height: 38vh;
+    margin: 0 3% 0 0;
+}
+
+.marketplaceSidebar__bodyFilters {
+    border-bottom: 1px solid lightgray;
+    margin-right: 3%;
+    height: 7vh;
+    padding-top: 5%;
+}
+
+.marketplaceSidebar__bodyFilters--location {
+    height: 40%;
+    border-radius: 6px;
+}
+
+.marketplaceSidebar__bodyFilters--location:hover {
+    background-color: #F2F2F2;
+}
+
+.marketplaceSidebar__bodyFilters--location > p {
+    font-weight: 500;
+    margin-top: 1%;
+    color: #1771E6;
+}
+
+.marketplaceSidebar__bodyButton {
+    background-color: #DBE7F2;
+    margin: 2% 0 0 0;
+    height: 4vh;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.marketplaceSidebar__bodyButton:hover {
+    background-color: #ccd7e0 !important;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.marketplaceSidebar__bodyButton > p {
+    color: #1771E6;
+    font-weight: 500;
+}
+
+.marketplaceSidebar__bodyFilters > p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.marketplaceSidebar__bodyCategories {
+    height: 35vh;
+}
+
+.marketplaceSidebar__body {
+    overflow-y: scroll;
 }

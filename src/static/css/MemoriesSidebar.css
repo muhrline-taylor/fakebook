@@ -1,0 +1,35 @@
+.memoriesSidebar {
+    background-color: #FFFFFF;
+    height: 92vh;
+    width: 70.5%;
+    border-right: 1px solid lightgray;
+    padding: 10px 1.5% 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.memoriesSidebar__header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+    height: 11vh;
+}
+
+.memoriesSidebar__header > h2 {
+    margin-bottom: 3%;
+}
+
+.memoriesSidebar__body {
+    flex: 1;
+}
+
+.memoriesSidebar__bodyHeader {
+    height: 3vh;
+    margin-bottom: 1%;
+}
+
+.memoriesSidebar__bodyHeader > p {
+    font-weight: 500;
+    margin-top: 2%;
+    font-size: 17px;
+}

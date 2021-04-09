@@ -20,6 +20,11 @@ import Pages from './Pages';
 import FriendsSidebar from './FriendsSidebar';
 import GroupsSidebar from './GroupsSidebar';
 import MarketplaceSidebar from './MarketplaceSidebar';
+import WatchSidebar from './WatchSidebar';
+import EventsSidebar from './EventsSidebar';
+import MemoriesSidebar from './MemoriesSidebar';
+import SavedSidebar from './SavedSidebar';
+import PagesSidebar from './PagesSidebar';
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -66,6 +71,31 @@ const Main = () => {
                     {
                         sidebar === "marketplace" ?
                         <MarketplaceSidebar />
+                        :""
+                    }
+                    {
+                        sidebar === "watch" ?
+                        <WatchSidebar />
+                        :""
+                    }
+                    {
+                        sidebar === "events" ?
+                        <EventsSidebar />
+                        :""
+                    }
+                    {
+                        sidebar === "memories" ?
+                        <MemoriesSidebar />
+                        :""
+                    }
+                    {
+                        sidebar === "saved" ?
+                        <SavedSidebar />
+                        :""
+                    }
+                    {
+                        sidebar === "pages" ?
+                        <PagesSidebar />
                         :""
                     }
                 </div>

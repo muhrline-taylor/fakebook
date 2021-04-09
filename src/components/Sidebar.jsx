@@ -13,12 +13,17 @@ import BookmarkIcon from '@material-ui/icons/Bookmark';
 import FlagIcon from '@material-ui/icons/Flag';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { changeSidebar, selectSidebar } from '../features/sidebarSlice';
+import AvatarTab from "./AvatarTab";
+import Tab from './Tab';
+import ScheduleIcon from '@material-ui/icons/Schedule';
+import ShortcutCard from './ShortcutCard';
 
 const Sidebar = ({  }) => {
     const user = useSelector(selectUserList);
     const [isActive, setIsActive] = useState("");
     const dispatch = useDispatch();
     const selected = useSelector(selectSidebar);
+
 
     return (
         <div className="sidebar">
@@ -30,7 +35,7 @@ const Sidebar = ({  }) => {
                             <Avatar 
                                 src={user.Users.pfp}
                             />
-                            <h4>{user.Users.fname}&nbsp;{user.Users.lname}</h4>
+                            <p>{user.Users.fname}&nbsp;{user.Users.lname}</p>
                         </>
                         :""
                     }
@@ -46,10 +51,9 @@ const Sidebar = ({  }) => {
                 >
                     <PeopleIcon
                         fontSize="large"
-                        color="primary"
-                        
+                        style={{color: "rgb(92, 129, 209)"}}
                     />
-                    <h4>Friends</h4>
+                    <p>Friends</p>
                 </div>
 
                 <div className={`sidebar__option ${selected === "groups" && 'sidebar__option--active'}`}
@@ -60,9 +64,9 @@ const Sidebar = ({  }) => {
                 >
                     <GroupAddIcon 
                         fontSize="large"
-                        color="primary"
+                        style={{color: "rgb(1, 167, 1, 0.7)"}}
                     />
-                    <h4>Groups</h4>
+                    <p>Groups</p>
                 </div>
 
                 <div className={`sidebar__option ${selected === "marketplace" && 'sidebar__option--active'}`}
@@ -73,9 +77,9 @@ const Sidebar = ({  }) => {
                 >
                     <StoreIcon 
                         fontSize="large"
-                        color="primary"
+                        style={{color: "rgb(92, 129, 209)"}}
                     />
-                    <h4>Marketplace</h4>
+                    <p>Marketplace</p>
                 </div>
 
                 <div className={`sidebar__option ${selected === "watch" && 'sidebar__option--active'}`}
@@ -86,9 +90,9 @@ const Sidebar = ({  }) => {
                 >
                     <PlayCircleFilledIcon 
                         fontSize="large"
-                        color="primary"
+                        style={{color: "red"}}
                     />
-                    <h4>Watch</h4>
+                    <p>Watch</p>
                 </div>
 
                 <div className={`sidebar__option ${selected === "events" && 'sidebar__option--active'}`}
@@ -99,9 +103,9 @@ const Sidebar = ({  }) => {
                 >
                     <EventIcon 
                         fontSize="large"
-                        color="primary"
+                        style={{color: "black"}}
                     />
-                    <h4>Events</h4>
+                    <p>Events</p>
                 </div>
 
                 <div className={`sidebar__option ${selected === "memories" && 'sidebar__option--active'}`}
@@ -112,9 +116,9 @@ const Sidebar = ({  }) => {
                 >
                     <HistoryIcon 
                         fontSize="large"
-                        color="primary"
+                        style={{color: "rgb(255, 187, 0)"}}
                     />
-                    <h4>Memories</h4>
+                    <p>Memories</p>
                 </div>
 
                 <div className={`sidebar__option ${selected === "saved" && 'sidebar__option--active'}`}
@@ -125,9 +129,9 @@ const Sidebar = ({  }) => {
                 >
                     <BookmarkIcon 
                         fontSize="large"
-                        color="primary"
+                        style={{color: "rgb(97, 1, 97)"}}
                     />
-                    <h4>Saved</h4>
+                    <p>Saved</p>
                 </div>
 
                 <div className={`sidebar__option ${selected === "pages" && 'sidebar__option--active'}`}
@@ -138,23 +142,49 @@ const Sidebar = ({  }) => {
                 >
                     <FlagIcon 
                         fontSize="large"
-                        color="primary"
+                        style={{color: "rgb(240, 130, 1, 0.8)"}}
                     />
-                    <h4>Pages</h4>
+                    <p>Pages</p>
                 </div>
 
-                <div className="sidebar__option">
-                    <ExpandMoreIcon 
+                <div className={`sidebar__option ${selected === "recent" && 'sidebar__option--active'}`}
+                    onClick={() => {
+                        setIsActive("recent")
+                        dispatch(changeSidebar("recent"))
+                    }}
+                >
+                    <ScheduleIcon
                         fontSize="large"
+                        color="primary"
                     />
-                    <h4>See More</h4>
+                    <p>Most Recent</p>
                 </div>
+                <div className="sidebar__optionTab">
+                    {/* HOVER NOT WORKING RIGHT */}
+                    <Tab 
+                        component={<ExpandMoreIcon />}
+                        clickHandler={() => {
+                            dispatch("seeMore")
+                            setIsActive("seeMore")
+                        }}
+                        name="See More"
+                        active={selected === "seeMore"}
+                    />
+                </div>
+                
+                
+                
             </div>
             <div className="sidebar__shortcuts">
                 <div className="sidebar__shortcutsHeader">
-                    <h4>Your Shortcuts</h4>
+                    <p>Your Shortcuts</p>
+                    
                     <p className="sidebar__shortcutsHeaderP">Edit</p>
                 </div>
+                <ShortcutCard 
+                    pic="https://media.self.com/photos/5f189b76c58e27c99fbef9e3/1:1/w_768,c_limit/blackberry-vanilla-french-toast.jpg"
+                    name="foods with threatening auras"
+                />
             </div>
         </div>
     )

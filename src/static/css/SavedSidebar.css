@@ -1,0 +1,63 @@
+.savedSidebar {
+    background-color: #FFFFFF;
+    height: 92vh;
+    width: 70.5%;
+    border-right: 1px solid lightgray;
+    padding: 10px 1.5% 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.savedSidebar__top {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 3%;
+}
+
+.savedSidebar__topHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+
+.savedSidebar__topHeader > P {
+    color: #1977F2;
+    font-weight: 400 !important;
+    cursor: pointer;
+    font-size: 15px !important;
+    margin: 2% 2.5% 0 0;
+}
+
+.savedSidebar__bottom {
+    padding-top: 3%;
+}
+
+.savedSidebar__bottomHeader {
+    
+}
+
+.savedSidebar__bottomHeader > p {
+    font-weight: 500;
+    font-size: 17px;
+    color: #4B4C4F;
+} 
+
+.savedSidebar__bottomButton {
+    background-color: #70b9fd2f;
+    margin: 2% 0 0 0;
+    height: 4vh;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.savedSidebar__bottomButton:hover {
+    background-color: #DBE7F2 !important;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.savedSidebar__bottomButton > p {
+    color: #1771E6;
+    font-weight: 500;
+}

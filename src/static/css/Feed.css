@@ -1,0 +1,64 @@
+.feed {
+    height: 92vh;
+    padding: 0 15% 0 13%;
+}
+
+.feed__stories {
+    height: 22%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3% 0;
+    margin: 0 -1.5%;
+}
+
+.feed__makePost {
+    height: 14%;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.164);
+    padding: 0 2.5%;
+}
+
+.feed__makePostTop {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    height: 47%;
+}
+
+.feed__makePostTop--input {
+    flex: 1;
+    height: 63%;
+    margin-left: 2%;
+    border-radius: 18px;
+    display: flex;
+    background-color: #F0F2F5;
+}
+
+.feed__makePostTop--input > input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    margin-left: 2%;
+}
+
+.feed__makePostTop--input > input:focus {
+    outline: none;
+}
+
+.feed__makePostBottom {
+    display: flex;
+    height: 30%;
+    padding: 1.5% 0 1% 0;
+}
+
+.feed__rooms {
+    height: 7.5%;
+    border-radius: 14px;
+    margin: 2.5% 0 0 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.164);
+    display: flex;
+}
+

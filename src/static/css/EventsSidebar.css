@@ -1,0 +1,105 @@
+.eventsSidebar {
+    background-color: #FFFFFF;
+    height: 92vh;
+    width: 72%;
+    border-right: 1px solid lightgray;
+    padding: 10px 0 0 15px;
+}
+
+.eventsSidebar__header {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 4%;
+    margin-right: 4%;
+}
+
+.eventsSidebar__headerSearch {
+    height: 4vh;
+    margin: 3% 0 0 0;
+    border-radius: 20px;
+    background-color: #F0F2F5;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.eventsSidebar__headerSearch > .MuiSvgIcon-root {
+    color: gray;
+}
+
+.eventsSidebar__headerSearch > input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+}
+
+.eventsSidebar__headerSearch > input:focus {
+    outline: none;
+}
+
+.eventsSidebar__main {
+    height: 81.5vh;
+    overflow-y: scroll;
+}
+
+.eventsSidebar__mainTop {
+    border-bottom: 1px solid lightgray;
+    height: 29%;
+}
+
+.eventsSidebar__mainMiddle {
+    border-bottom: 1px solid lightgray;
+    height: 29.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.eventsSidebar__mainBottom {
+    
+}
+
+.eventsSidebar__mainTop--button {
+    height: 17%;
+    margin: 4% 1% 0 0;
+    background-color: #EAF3FF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.eventsSidebar__mainTop--button:hover {
+    background-color: #F2F2F2 !important;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.eventsSidebar__mainTop--button > p {
+    font-weight: 500;
+    color: #1771E6;
+}
+
+.eventsSidebar__mainMiddle__header {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.eventsSidebar__mainMiddle__header > p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.eventsSidebar__mainMiddle__header--p {
+    color: #1977F2;
+    font-weight: 400 !important;
+    cursor: pointer;
+    font-size: 16px !important;
+}
+
+.eventsSidebar__mainBottom__header {
+    width: 100%;
+    margin-top: 1%;
+    padding-top: 2%;
+}

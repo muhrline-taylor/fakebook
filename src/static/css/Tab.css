@@ -1,0 +1,46 @@
+.tab {
+    height: 5.5vh;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.tab:hover {
+    background-color: #F2F2F2 !important;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.tab__icon {
+    height: 68%;
+    width: 11%;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #D8DADF;
+}
+
+.tab > p {
+    font-weight: 500;
+    margin-left: 5%;
+}
+
+.tab--active {
+    background-color: #EAF3FF !important;
+}
+
+.tab__icon--active {
+    background-color: #1977F2 !important;
+    height: 66%;
+    width: 11%;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #D8DADF;
+}
+
+.tab__icon--active > .MuiSvgIcon-root {
+    color: white;
+}

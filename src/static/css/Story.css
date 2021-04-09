@@ -1,0 +1,21 @@
+.story {
+    
+}
+
+.story__top {
+    display: flex;
+    margin: 5% 0 0 8%;
+}
+
+.story__bottom {
+    display: flex;
+    height: 40%;
+    margin: 50% 5% 2% 7%;
+    align-items: center;
+}
+
+.story__bottom > p {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}

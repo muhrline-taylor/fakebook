@@ -1,0 +1,30 @@
+.makePostButton {
+    height: 120%;
+    flex: 1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.makePostButton:hover {
+    background-color: #F2F2F2;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.makePostButton__container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.makePostButton__container > p {
+    font-size: 15px;
+    margin: 0 0 0 1%;
+    font-weight: 500;
+    color: #606266;
+}
+

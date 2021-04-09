@@ -16,13 +16,15 @@ import MessageIcon from '@material-ui/icons/Message';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { changeSidebar, selectSidebar } from '../features/sidebarSlice';
+import { selectMarketplaceSidebar } from '../features/marketplaceSidebarSlice';
 
 const MainHeader = ({  }) => {
     const [searchInput, setSearchInput] = useState("");
     const [isActive, setIsActive] = useState("home");
     const [user, setUser] = useState({});
     const dispatch = useDispatch();
-    const selected = useSelector(selectSidebar)
+    const selected = useSelector(selectSidebar);
+    const marketplaceSelected = useSelector(selectMarketplaceSidebar);
 
     
 
@@ -64,29 +66,29 @@ const MainHeader = ({  }) => {
                 </div>
 
                 <div 
-                    className={`mainHeader__centerIcon ${selected === "subscriptions" && 'mainHeader__centerIcon--active'}`}
-                    onClick={() => dispatch(changeSidebar("subscriptions"))}
+                    className={`mainHeader__centerIcon ${selected === "watch" && 'mainHeader__centerIcon--active'}`}
+                    onClick={() => dispatch(changeSidebar("watch"))}
                 >
                     <SubscriptionsIcon fontSize="large"/>
                 </div>
 
                 <div 
-                    className={`mainHeader__centerIcon ${isActive === "storefront" && 'mainHeader__centerIcon--active'}`}
-                    onClick={() => setIsActive("storefront")}
+                    className={`mainHeader__centerIcon ${selected === "marketplace" && 'mainHeader__centerIcon--active'}`}
+                    onClick={() => dispatch(changeSidebar("marketplace"))}
                 >
                     <StorefrontIcon fontSize="large"/>
                 </div>
 
                 <div 
-                    className={`mainHeader__centerIcon ${isActive === "group" && 'mainHeader__centerIcon--active'}`}
-                    onClick={() => setIsActive("group")}
+                    className={`mainHeader__centerIcon ${selected === "groups" && 'mainHeader__centerIcon--active'}`}
+                    onClick={() => dispatch(changeSidebar("groups"))}
                 >
                     <GroupIcon fontSize="large"/>
                 </div>
 
                 <div 
-                    className={`mainHeader__centerIcon ${isActive === "widgets" && 'mainHeader__centerIcon--active'}`}
-                    onClick={() => setIsActive("widgets")}
+                    className={`mainHeader__centerIcon ${selected === "widgets" && 'mainHeader__centerIcon--active'}`}
+                    onClick={() => dispatch(changeSidebar("widgets"))}
                 >
                     <WidgetsIcon fontSize="large"/>
                 </div>

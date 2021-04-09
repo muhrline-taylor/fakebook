@@ -1,0 +1,35 @@
+.shortcutCard {
+    height: 18%;
+    margin-left: 4%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.shortcutCard:hover {
+    background-color: #E4E6E9;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.shortcutCard__pic {
+    border-radius: 12px;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.shortcutCard__pic > img {
+    object-fit: fill;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.486);
+}
+
+.shortcutCard__name {
+    margin-top: -1%;
+}
+
+.shortcutCard__name > p {
+    font-weight: 500;
+}

@@ -2,20 +2,24 @@
     height: 92vh;
     width: 70%;
     padding-top: 10px;
+    padding-left: 2%;
 }
 
 .sidebar__options {
     border-bottom: 1px solid lightgray;
-    height: 60vh;
+    padding-bottom: 2%;
 }
 
 .sidebar__option {
-    height: 7%;
-    margin: 2px 0 0 8px;
-    padding: 13px 0 0 0;
+    height: 5%;
+    margin: 0 0 0 8px;
+    padding: 10px 0 1% 0;
     display: flex;
-    align-items: center;
     border-radius: 10px;
+}
+
+.sidebar__option > .MuiSvgIcon-root {
+    margin-bottom: 2%;
 }
 
 .sidebar__option--active {
@@ -25,14 +29,18 @@
 .sidebar__option:hover {
     background-color: #E4E6E9;
     transition: 100ms ease-in-out;
+    cursor: pointer;
 }
 
-.sidebar__option > h4 {
+.sidebar__option > p {
     margin-left: 12px;
+    margin-top: 1%;
+    font-weight: 500;
 }
 
 .sidebar__shortcuts {
     height: 250px;
+    padding-top: 2%;
 }
 
 .sidebar__shortcutsHeader {
@@ -41,13 +49,29 @@
     padding: 5px 15px;
 }
 
+.sidebar__shortcutsHeader > p {
+    font-weight: 500 !important;
+    color: #75777B;
+    font-size: 18px;
+}
+
 .sidebar__shortcutsHeaderP {
     display: none;
+    font-weight: 0 !important;
 }
 
 .sidebar__shortcutsHeader:hover .sidebar__shortcutsHeaderP {
     display: block;
     color: #1977F2 !important;
+    font-size: 16px !important;
     cursor: pointer;
 }
+
+.sidebar__optionTab {
+    margin-left: 1.5%;
+    background: none;
+    border: none;
+}
+
+
 

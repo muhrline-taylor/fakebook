@@ -1,0 +1,41 @@
+.pagesSidebar {
+    background-color: #FFFFFF;
+    height: 92vh;
+    width: 69%;
+    border-right: 1px solid lightgray;
+    padding: 10px 3% 0 15px;
+}
+
+.pagesSidebar__top {
+    height: 11%;
+    border-bottom: 1px solid lightgray;
+}
+
+.pagesSidebar__topHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagesSidebar__topHeader--settings {
+    background-color: #D8DADF;
+    border-radius: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 11%;
+}
+
+.pagesSidebar__topHeader--settings:hover {
+    background-color: #c9cbcf;
+    cursor: pointer;
+}
+
+.pagesSidebar__topButton {
+    height: 36%;
+    margin-top: 7%;
+    width: 99.5%;
+}
+
+.pagesSidebar__bottom {
+    margin-top: 5%;
+}

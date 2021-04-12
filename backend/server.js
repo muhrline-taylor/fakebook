@@ -12,5 +12,6 @@ require("./config/mongoose.config")
 
     // CONNECT TO ROUTES AND PASS IT TO MY APP
 require("./routes/users.routes")(app)
+require("./routes/posts.routes")(app)
 
 app.listen(port, () => console.log(`MERN_PORT: ${port}`))

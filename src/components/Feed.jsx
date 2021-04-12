@@ -1,5 +1,5 @@
 import { Avatar } from '@material-ui/core';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectUserList } from '../features/userSlice';
 import "../static/css/Feed.css";
@@ -10,10 +10,46 @@ import LiveTvIcon from '@material-ui/icons/LiveTv';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import CreateRoom from './CreateRoom';
+import Post from './Post';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
+import axios from 'axios';
 
 const Feed = () => {
     const user = useSelector(selectUserList);
-    const [postInput, setPostInput] = useState("")
+    const [postInput, setPostInput] = useState();
+    const [posts, setPosts] = useState([]);
+    const [imgUrl, setImgUrl] = useState();
+    
+    useEffect(() => {
+        axios.get("http://localhost:8001/api/posts")
+            .then(res => setPosts(res.data.Posts))
+    },[])
+
+    const submitHandler = e => {
+        e.preventDefault();
+        if(user.Users){
+            var form = {
+                userFName: user.Users.fname,
+                userLName: user.Users.lname,
+                userEmail: user.Users.email,
+                userPfp: user.Users.pfp,
+                text: postInput,
+                pic: imgUrl,
+                comments: [],
+                likes: [],
+            }
+            axios.post("http://localhost:8001/api/posts/new", form)
+            .then(res => {
+                if(res.data.error) {
+                    console.log(res.data.error)
+                } else {
+                    window.location.reload();
+                }
+            })
+        }
+        
+    }
+
 
     return (
         <div className="feed">
@@ -52,22 +88,28 @@ const Feed = () => {
                             src={user.Users.pfp}
                         />
                         <div className="feed__makePostTop--input">
-                            <input 
-                                placeholder={`What's on your mind, ${user.Users.fname}?`}
-                                onChange={e => setPostInput(e.target.value)}
-                                value={postInput}
-                            />
+                            <form onSubmit={submitHandler}>
+                                <input 
+                                    placeholder={`What's on your mind, ${user.Users.fname}?`}
+                                    onChange={e => setPostInput(e.target.value)}
+                                    value={postInput}
+                                />
+                                <button type="submit"></button>
+                            </form>
+                            
                         </div>
                     </div>
                     <div className="feed__makePostBottom">
                         <MakePostButton 
-                            component={<LiveTvIcon 
+                            component={<VideoCallIcon 
                                 style={{
                                     color: "rgba(255, 0, 0, 0.7)",
                                     height: "35px",
                                     width: "35px",
                                 }}
                             />}
+                            clickHandler={() => {}}
+                            size="120%"
                             text="Live Video"
                         />
                         <MakePostButton 
@@ -78,6 +120,10 @@ const Feed = () => {
                                     width: "30px",
                                 }}
                             />}
+                            size="120%"
+                            clickHandler={() => {
+                                setImgUrl(prompt("Enter image URL"))
+                            }}
                             text="Photo/Video"
                         />
                         <MakePostButton 
@@ -87,7 +133,9 @@ const Feed = () => {
                                     height: "32px",
                                     width: "32px",
                                 }}
+                                clickHandler={() => {}}
                             />}
+                            size="120%"
                             text="Feeling/Activity"
                         />
                     </div>
@@ -96,6 +144,16 @@ const Feed = () => {
             }
             <div className="feed__rooms">
                 <CreateRoom />
+            </div>
+            {
+                posts.length > 0 ?
+                posts.map((post, k) => (
+                    <Post post={post}/>
+                ))
+                :""
+            }
+            <div className="feed__footer">
+
             </div>
         </div>
     )

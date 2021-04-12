@@ -119,3 +119,13 @@
 .marketplaceSidebar__body {
     overflow-y: scroll;
 }
+
+.marketplaceSidebar__body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+}
+
+.marketplaceSidebar__body::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.637);
+    border-radius: 18px;
+}

@@ -99,8 +99,14 @@ const MainHeader = ({  }) => {
                 <div className="mainHeader__rightAvatar">
                     {
                         user.Users !== undefined ?
-                        <Avatar src={user.Users.pfp} />
-                        :<Avatar />
+                        <Avatar src={user.Users.pfp} style={{
+                            height: "32px",
+                            width: "32px",
+                        }}/>
+                        :<Avatar style={{
+                            height: "30px",
+                            width: "30px",
+                        }}/>
                     }
                     {
                         user.Users !== undefined ?

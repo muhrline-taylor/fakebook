@@ -62,6 +62,16 @@
     overflow-y: scroll;
 }
 
+.watchSidebar__main::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+}
+
+.watchSidebar__main::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.342);
+    border-radius: 18px;
+}
+
 .watchSidebar__mainTop {
     border-bottom: 1px solid lightgray;
     height: 28.5vh;

@@ -1,5 +1,7 @@
 const Users = require("../models/user.model");
 
+
+//   ====== USERS ==========   //
 module.exports.findAllUsers = (req, res) => {
     Users.find()
         .then(allUsers => res.json({Users: allUsers}))
@@ -41,3 +43,6 @@ module.exports.deleteOneUser = (req, res) => {
         .then(res.json({message: "User deleted!"}))
         .catch(err => res.json({message: "Something went wrong deleting the user!", error: err}))
 }
+
+//   ====== END USERS ==========   //
+

@@ -1,0 +1,6 @@
+.marketplaceCard {
+    height: 36vh;
+    min-width: 16%;
+    border: 1px dotted black;
+    margin: 0 0 0 0.5%;
+}

@@ -1,0 +1,24 @@
+.postPic {
+    margin: 0 -2.75% 0 -2.6%;
+    display: flex;
+    min-height: 30vh;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    transition: ease-in-out 0.3s;
+    justify-content: space-around;
+}
+
+.postPic > img {
+    object-fit: contain;
+    max-width: 99.9%;
+}
+
+.postPic > img:hover {
+    cursor: pointer;
+}
+
+.postPic:hover {
+    transform: scale(1.003);
+    transition: ease-in-out 0.2s;
+    box-shadow: 3px 1px 4px rgba(0, 0, 0, 0.055) !important;
+}

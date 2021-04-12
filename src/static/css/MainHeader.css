@@ -89,13 +89,15 @@
 }
 
 .mainHeader__right {
-    flex: 0.2;
+    flex: 0.18;
     padding-top: 7px;
     display: flex;
+    align-items: center;
+    margin-right: -1%;
 }
 
 .mainHeader__rightAvatar {
-    width: 36%;
+    width: 27%;
     padding: 2px;
     display: flex;
     align-items: center;
@@ -108,8 +110,8 @@
 }
 
 .mainHeader__rightAvatar > p {
-    margin-left: 6px;
-    font-weight: 250;
+    margin-left: 10%;
+    font-weight: 500;
 }
 
 .mainHeader__rightIcon {

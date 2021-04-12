@@ -1,0 +1,26 @@
+.marketplaceHeader {
+    color: white;
+}
+
+.marketplaceHeader--button {
+    border: 1px dotted white;
+    border-radius: 9px;
+    width: 5.2vw;
+    margin-top: 1.5%;
+    height: 3.7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.marketplaceHeader--button:hover {
+    background-color: #F2F2F2;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.marketplaceHeader--button > p {
+    font-weight: 500;
+    color: rgb(87, 87, 87);
+}

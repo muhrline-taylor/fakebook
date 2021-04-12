@@ -41,6 +41,16 @@
     overflow-y: scroll;
 }
 
+.eventsSidebar__main::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+}
+
+.eventsSidebar__main::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.637);
+    border-radius: 18px;
+}
+
 .eventsSidebar__mainTop {
     border-bottom: 1px solid lightgray;
     height: 29%;

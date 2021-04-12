@@ -56,19 +56,6 @@ const Sidebar = ({  }) => {
                     <p>Friends</p>
                 </div>
 
-                <div className={`sidebar__option ${selected === "groups" && 'sidebar__option--active'}`}
-                    onClick={() => {
-                        setIsActive("groups")
-                        dispatch(changeSidebar("groups"))
-                    }}
-                >
-                    <GroupAddIcon 
-                        fontSize="large"
-                        style={{color: "rgb(1, 167, 1, 0.7)"}}
-                    />
-                    <p>Groups</p>
-                </div>
-
                 <div className={`sidebar__option ${selected === "marketplace" && 'sidebar__option--active'}`}
                     onClick={() => {
                         setIsActive("marketplace")
@@ -80,6 +67,19 @@ const Sidebar = ({  }) => {
                         style={{color: "rgb(92, 129, 209)"}}
                     />
                     <p>Marketplace</p>
+                </div>
+
+                <div className={`sidebar__option ${selected === "groups" && 'sidebar__option--active'}`}
+                    onClick={() => {
+                        setIsActive("groups")
+                        dispatch(changeSidebar("groups"))
+                    }}
+                >
+                    <GroupAddIcon 
+                        fontSize="large"
+                        style={{color: "rgb(1, 167, 1, 0.7)"}}
+                    />
+                    <p>Groups</p>
                 </div>
 
                 <div className={`sidebar__option ${selected === "watch" && 'sidebar__option--active'}`}

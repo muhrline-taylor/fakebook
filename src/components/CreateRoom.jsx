@@ -2,12 +2,13 @@ import React from 'react';
 import "../static/css/CreateRoom.css";
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import { Avatar } from '@material-ui/core';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
 
 const CreateRoom = () => {
     return (
         <div className="createRoom">
             <div className="createRoom__button">
-                <AddToQueueIcon 
+                <VideoCallIcon
                     style={{color: "rgba(90, 1, 90, 0.651)"}}
                 />
                 <p>Create Room</p>

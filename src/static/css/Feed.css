@@ -1,6 +1,11 @@
 .feed {
-    height: 92vh;
+    height: 94vh;
     padding: 0 15% 0 13%;
+    overflow-y: scroll;
+}
+
+.feed::-webkit-scrollbar {
+    display:none;
 }
 
 .feed__stories {
@@ -35,7 +40,16 @@
     background-color: #F0F2F5;
 }
 
-.feed__makePostTop--input > input {
+.feed__makePostTop--input > form {
+    display: flex;
+    flex: 1;
+}
+
+.feed__makePostTop--input > form > button {
+    display: none;
+}
+
+.feed__makePostTop--input > form > input {
     width: 100%;
     border: none;
     background: transparent;
@@ -43,7 +57,7 @@
     margin-left: 2%;
 }
 
-.feed__makePostTop--input > input:focus {
+.feed__makePostTop--input > form > input:focus {
     outline: none;
 }
 
@@ -60,5 +74,9 @@
     background-color: #FFFFFF;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.164);
     display: flex;
+}
+
+.feed__footer {
+    height: 1.5%;
 }
 

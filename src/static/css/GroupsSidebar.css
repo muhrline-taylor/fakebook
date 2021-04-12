@@ -151,6 +151,16 @@
     overflow-y: scroll !important;
 }
 
+.groupsSidebar__bottom::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+}
+
+.groupsSidebar__bottom::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.637);
+    border-radius: 18px;
+}
+
 .groupsSidebar__bottomHeader > p {
     font-weight: 500;
     font-size: 20px;

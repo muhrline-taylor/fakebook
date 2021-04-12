@@ -1,0 +1,7 @@
+.postText {
+    margin-bottom: 2%;
+}
+
+.postText > p {
+    font-weight: 450;
+}

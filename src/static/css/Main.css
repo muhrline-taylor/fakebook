@@ -4,6 +4,7 @@
     background-color: #F0F2F5;
     display: block;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .main__header {

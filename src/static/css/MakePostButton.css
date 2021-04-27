@@ -1,6 +1,6 @@
 .makePostButton {
     flex: 1;
-    border-radius: 8px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -30,6 +30,6 @@
     display: flex;
     align-items: center;
     height: 4.5vh;
-    color: black
+    color: black;
 }
 

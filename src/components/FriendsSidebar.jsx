@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "../static/css/FriendsSidebar.css";
 import SettingsIcon from '@material-ui/icons/Settings';
 import FriendCard from './FriendCard';
 import { Button } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import axios from 'axios';
 
 
 const FriendsSidebar = () => {
+    const [friendsList, setFriendsList] = useState([
+        
+    ]);
+
+    useEffect(() => {
+        axios.get("http://localhost:8001/api/users")
+            .then(res => setFriendsList(res.data.Users))
+    },[]);
+
     return (
         <div className="friendsSidebar">
             <div className="friendsSidebar__header">
@@ -26,6 +36,7 @@ const FriendsSidebar = () => {
                     mutuals="9"
                     time="1d"
                     buttonText="Confirm"
+                    height="100%"
                 />
                 <FriendCard 
                     pfp
@@ -33,6 +44,7 @@ const FriendsSidebar = () => {
                     mutuals="45"
                     time="3w"
                     buttonText="Confirm"
+                    height="100%"
                 />
                 <FriendCard 
                     pfp
@@ -40,6 +52,7 @@ const FriendsSidebar = () => {
                     mutuals="2"
                     time="1y"
                     buttonText="Confirm"
+                    height="100%"
                 />
                 <div className="friendsSidebar__requests--footer">
                     <Button
@@ -57,69 +70,21 @@ const FriendsSidebar = () => {
                     <h3>People You May Know</h3>
                 </div>
                 <div className="friendsSidebar__suggestionsContent">
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
-                    <FriendCard 
-                        pfp
-                        friendName="Timmy Turner"
-                        mutuals="2"
-                        time="1y"
-                        buttonText="Add Friend"
-                    />
+                    {
+                        friendsList ?
+                        friendsList.map((user, k) => (
+                            <FriendCard 
+                                pfp={user.pfp}
+                                friendName={`${user.fname} ${user.lname}`}
+                                mutuals="2"
+                                time="1y"
+                                buttonText="Add Friend"
+                                height="6.7vh"
+                            />
+                        ))
+                        :""
+                    }
+                    
                 </div>
             </div>
         </div>

@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "../static/css/CreateRoom.css";
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import { Avatar } from '@material-ui/core';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
+import axios from 'axios';
 
 const CreateRoom = () => {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:8001/api/users")
+            .then(res => setUsers(res.data.Users))
+    },[])
+
+
     return (
         <div className="createRoom">
             <div className="createRoom__button">
@@ -13,51 +22,19 @@ const CreateRoom = () => {
                 />
                 <p>Create Room</p>
             </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
-            <div className="createRoom__friend">
-                <Avatar 
-                    src="https://www.pinclipart.com/picdir/middle/209-2098523_individuals-person-icon-circle-png-clipart.png"
-                />
-            </div>
+            {
+                users.length > 0 ?
+                <>
+                    {
+                        users.map((user, k) => (
+                            <div className="createRoom__friend">
+                                <Avatar src={user.pfp} />
+                            </div>
+                        ))
+                    }
+                </>
+                :""
+            }
             
         </div>
     )

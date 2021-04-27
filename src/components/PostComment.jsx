@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import "../static/css/PostComment.css";
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
-const PostComment = ({ comment, post }) => {
+const PostComment = ({ comment, post, margin }) => {
     const [user, setUser] = useState({});
 
 
@@ -36,7 +36,9 @@ const PostComment = ({ comment, post }) => {
                         {
                             user.fname && user.lname ?
                             <>
-                            <div className="postComment__main">
+                            <div className="postComment__main" style={{
+                                marginLeft: margin
+                            }}>
                                 <div className="postComment__mainContainer">
                                     <div className="postComment__mainBubble">
                                         <h5>{user.fname} {user.lname}</h5>

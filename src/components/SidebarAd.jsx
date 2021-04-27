@@ -7,9 +7,14 @@ const SidebarAd = ({ pic, name, link }) => {
             <div className="sidebarAd__pic">
                 <img src={pic} alt="sidebarAd__pic" />
             </div>
+            
             <div className="sidebarAd__content">
-                <h3>{name} -</h3> 
-                <a href={link}>{link}</a>
+                <p style={{
+                    fontWeight: "500"
+                }}>{name}</p>
+                <p style={{
+                    color: "gray"
+                }}>{link}</p>
             </div>
         </div>
     )

@@ -152,13 +152,21 @@
 }
 
 .groupsSidebar__bottom::-webkit-scrollbar {
+    width: 7px;
+}
+
+.groupsSidebar__bottom:hover::-webkit-scrollbar {
     background-color: transparent;
     width: 7px;
 }
 
 .groupsSidebar__bottom::-webkit-scrollbar-thumb {
-    background-color: rgba(128, 128, 128, 0.637);
+    background-color: rgba(128, 128, 128, 0);
     border-radius: 18px;
+}
+
+.groupsSidebar:hover .groupsSidebar__bottom::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.637);
 }
 
 .groupsSidebar__bottomHeader > p {

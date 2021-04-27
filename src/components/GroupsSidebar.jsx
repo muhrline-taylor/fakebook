@@ -9,6 +9,7 @@ import ExploreIcon from '@material-ui/icons/Explore';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { Button } from '@material-ui/core';
 import GroupCard from './GroupCard';
+import axios from 'axios';
 
 const defaultPic = "https://i.pinimg.com/474x/10/45/8f/10458f2b832b62f013d97dbf10880bb3.jpg";
 const defaultName = "Nature Lovers";
@@ -16,6 +17,7 @@ const defaultLastActive = "10m"
 
 const GroupsSidebar = () => {
     const [input, setInput] = useState("");
+    const [groups, setGroups] = useState([]);
     const dispatch = useDispatch();
     const groupsSelected = useSelector(selectGroupsSidebar);
 
@@ -23,6 +25,11 @@ const GroupsSidebar = () => {
         if(groupsSelected === ""){
             dispatch(changeGroupsSidebar("feed"))
         }
+    },[])
+
+    useEffect(() => {
+        axios.get("http://localhost:8001/api/groups")
+            .then(res => setGroups(res.data.Groups))
     },[])
 
     return (
@@ -89,8 +96,17 @@ const GroupsSidebar = () => {
                     <div className="groupsSidebar__bottomHeader">
                         <p>Groups You've Joined</p>
                     </div>
-                    <GroupCard pic={defaultPic} name={defaultName} lastActive={defaultLastActive}/>
-                    <GroupCard pic={defaultPic} name={defaultName} lastActive={defaultLastActive}/>
+                    {
+                        groups ?
+                        groups.map((group, k) => (
+                            <GroupCard 
+                                pic={group.pfp}
+                                name={group.title}
+                                lastActive={defaultLastActive}
+                            />
+                        ))
+                        :""
+                    }
                     <GroupCard pic={defaultPic} name={defaultName} lastActive={defaultLastActive}/>
                     <GroupCard pic={defaultPic} name={defaultName} lastActive={defaultLastActive}/>
                     <GroupCard pic={defaultPic} name={defaultName} lastActive={defaultLastActive}/>

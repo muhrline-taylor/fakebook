@@ -1,0 +1,119 @@
+.marketplaceAdd {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 2% 0 0 0;
+}
+
+.marketplaceAdd__header {
+    border-bottom: 1px solid lightgray;
+}
+
+.marketplaceAdd__headerTop {
+    display: flex;
+    margin: 0 0 2% 0;
+}
+
+.marketplaceAdd__headerTopL {
+    flex: 0.75;
+}
+
+.marketplaceAdd__headerTopR {
+    flex: 0.25;
+    margin: 2% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.marketplaceAdd__headerTopR:hover {
+    background-color: rgba(211, 211, 211, 0.678);
+    cursor: pointer;
+}
+
+.marketplaceAdd__body {
+    margin: 9% 0 0 0;
+}
+
+.marketplaceAdd__bodyHeader {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    margin: 0 0 3% 0;
+}
+
+.marketplaceAdd__bodyHeaderText {
+    margin: 0 0 0 5%;
+}
+
+.marketplaceAdd__body--input {
+    border: 1px solid lightgray;
+    height: 5vh;
+    margin: 4% 0;
+    border-radius: 8px;
+    display: flex;
+}
+
+.marketplaceAdd__body--input > input {
+    flex: 1;
+    border-radius: 8px;
+    border: none;
+    padding: 0 0 0 5%;
+    font-size: 16px;
+}
+
+.marketplaceAdd__body--input > select {
+    flex: 1;
+    border: none;
+    border-radius: 8px;
+    padding: 0 0 0 3%;
+    font-size: 16px;
+    color: gray;
+}
+
+.marketplaceAdd__body--input > input:focus {
+    outline-color: rgba(128, 128, 128, 0.5);
+    border-radius: 8px;
+}
+
+.marketplaceAdd__body--input > select:focus {
+    outline-color: rgba(128, 128, 128, 0.5);
+    border-radius: 8px;
+}
+
+.marketplaceAdd--button {
+    height: 5vh;
+    background-color: #DBE7F2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.116);
+}
+
+.marketplaceAdd--button > p {
+    font-weight: 500;
+    color: gray;
+    font-size: 18px;
+}
+
+.marketplaceAdd--buttonActive {
+    height: 5vh;
+    background-color: #1876f2b7;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.116);
+}
+
+.marketplaceAdd--buttonActive > p {
+    color: white;
+}
+
+.marketplaceAdd--buttonActive:hover {
+    background-color: #1877F2;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}

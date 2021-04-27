@@ -1,0 +1,44 @@
+.marketplaceNew {
+    background-color: #FFFFFF;
+    height: 92vh;
+    width: 69%;
+    border-right: 1px solid lightgray;
+    padding: 10px 3% 0 15px;
+}
+
+.marketplaceNew__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marketplaceNew__header > p {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.marketplaceNew__header--button {
+    width: 11.5%;
+    height: 4vh;
+    border-radius: 20px;
+    background-color: #91919198;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.marketplaceNew__header--button:hover {
+    background-color: #919191c2;
+}
+
+.marketplaceNew__tabs {
+    margin: 3% 0 0 0;
+}
+
+.marketplaceNew__tabsTop {
+    border-bottom: 1px solid lightgray;
+    padding: 0 0 3% 0;
+}
+
+.marketplaceNew__tabsBottom {
+    margin: 3% 0 0 0;
+}

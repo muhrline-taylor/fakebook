@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "../static/css/Marketplace.css";
 import MarketplaceHeader from './MarketplaceHeader';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import MarketplaceCard from './MarketplaceCard';
+import axios from 'axios';
 
 const Marketplace = () => {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:8001/api/saleItems")
+            .then(res => setItems(res.data.SaleItems))
+    },[])
+
+    useEffect(() => {
+        console.log(items)
+    })
+
+
     return (
         <div className="marketplace">
             <div className="marketplace__header">
@@ -21,30 +34,42 @@ const Marketplace = () => {
                     </div>
                 </div>
                 <div className="marketplace__mainBody">
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
-                    <MarketplaceCard />
+                    {
+                        items ?
+                        items.map((item, k) => (
+                            <MarketplaceCard 
+                                price={item.price}
+                                title={item.title}
+                                location={item.location}
+                                pic={item.photo}
+                            />
+                        ))
+                        :""
+                    }
+                    {
+                        items ?
+                        items.map((item, k) => (
+                            <MarketplaceCard 
+                                price={item.price}
+                                title={item.title}
+                                location={item.location}
+                                pic={item.photo}
+                            />
+                        ))
+                        :""
+                    }
+                    {
+                        items ?
+                        items.map((item, k) => (
+                            <MarketplaceCard 
+                                price={item.price}
+                                title={item.title}
+                                location={item.location}
+                                pic={item.photo}
+                            />
+                        ))
+                        :""
+                    }
                 </div>
             </div>
         </div>

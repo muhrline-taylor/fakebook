@@ -276,6 +276,7 @@ const PostBody = ({ post }) => {
                                 <PostComment 
                                     post={post}
                                     comment={comment}
+                                    margin="0"
                                 />
                             ))
                         }

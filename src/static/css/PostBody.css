@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .postBody__topReacts--icon:hover {

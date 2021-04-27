@@ -1,0 +1,140 @@
+.watchCard {
+    min-height: 7vh;
+}
+
+.watchCard__header {
+    min-height: 6vh;
+    display: flex;
+}
+
+.watchCard__headerL {
+    flex: 0.07;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.watchCard__headerM {
+    flex: 0.86;
+    padding: 1% 0 0 0;
+}
+
+.watchCard__headerR {
+    flex: 0.07;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.watchCard__headerM__top {
+    height: 45%;
+    display: flex;
+    align-items: center;
+}
+
+.watchCard__headerM__top > p {
+    color: #1876F2;
+    display: flex;
+    align-items: center;
+}
+
+.watchCard__headerM__top > p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.watchCard__headerM__bottom {
+    margin-top: 0.3%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.watchCard__headerM__bottom > p {
+    color: gray;
+    font-size: 14px;
+}
+
+.watchCard__headerR--button {
+    height: 62%;
+    width: 55%;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.watchCard__text {
+    padding: 0 0 0 1%;
+    margin: 0 0 1% 0;
+}
+
+.watchCard__footer {
+    height: 4.5vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3% 0 0 0;
+}
+
+.watchCard__footerL {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0.5%;
+}
+
+.watchCard__footerR {
+    width: 21%;
+    padding: 1% 0 1% 0;
+    display: flex;
+    align-items: center;
+}
+
+.watchCard__footerR__left {
+    flex: 0.38;
+    height: 108%;
+    display: flex;
+    align-items: center;
+}
+
+.watchCard__footerR__left--react {
+    height: 92%;
+    width: 35%;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.5px solid rgba(128, 128, 128, 0.514);
+}
+
+.watchCard__footerR__left--react:hover {
+    cursor: pointer;
+}
+
+.watchCard__footerR__middle {
+    flex: 0.13;
+    margin-left: 2%;
+}   
+
+.watchCard__footerR__middle:hover {
+    cursor: pointer;
+}
+
+.watchCard__footerR__dot {
+    display: flex;
+    align-items: center;
+}
+
+.watchCard__footerR__right {
+    flex: 0.5;
+    padding: 0 0 0 1%;
+    display: flex;
+    align-items: center;
+}
+
+.watchCard__footerR__right > p {
+    font-size: 12px;
+}
+
+
+

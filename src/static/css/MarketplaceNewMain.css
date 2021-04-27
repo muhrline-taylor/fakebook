@@ -1,0 +1,7 @@
+.marketplaceNewMain {
+    height: 100%;
+    width: 42vw;
+    display: flex;
+    align-items: center;
+    padding: 0 25%;
+}

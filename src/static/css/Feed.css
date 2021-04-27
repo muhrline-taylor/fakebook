@@ -2,6 +2,7 @@
     height: 94vh;
     padding: 0 15% 0 13%;
     overflow-y: scroll;
+    min-width: 72%;
 }
 
 .feed::-webkit-scrollbar {

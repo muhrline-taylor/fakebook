@@ -8,6 +8,7 @@ import eventsSidebarReducer from "../features/eventsSidebarSlice";
 import memoriesSidebarReducer from "../features/memoriesSidebarSlice";
 import savedSidebarReducer from "../features/savedSidebarSlice";
 import pagesSidebarReducer from "../features/pagesSidebarSlice";
+import marketplaceItemReducer from "../features/marketplaceItemSlice";
 
 export default configureStore({
   reducer: {
@@ -20,5 +21,6 @@ export default configureStore({
     memoriesSidebar: memoriesSidebarReducer,
     savedSidebar: savedSidebarReducer,
     pagesSidebar: pagesSidebarReducer,
+    marketplaceItem: marketplaceItemReducer,
   },
 });

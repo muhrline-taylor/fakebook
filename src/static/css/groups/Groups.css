@@ -1,0 +1,28 @@
+.groups {
+    width: 45vw;
+    height: 93vh;
+    padding: 0 0 0 22%;
+    display: flex;
+}
+
+.groupsL {
+    width: 59%;
+    padding: 3% 1% 0 0;
+    overflow-y: scroll;
+}
+
+.groupsL::-webkit-scrollbar {
+    display: none;
+}
+
+.groupsL > p {
+    font-weight: 500;
+    color: rgb(107, 107, 107);
+    font-size: 15px;
+}
+
+.groupsR {
+    border: 1px dotted red;
+    width: 41%;
+    padding: 0 0 0 1%;
+}

@@ -1,31 +1,28 @@
 .friend {
-    height: 40px;
-    margin-top: 4px;
+    height: 5vh;
     display: flex;
+    align-items: center;
     border-radius: 12px;
-    transition: 100ms ease-in;
 }
 
 .friend:hover {
-    background-color: #65676b31;
+    background-color: #E4E6E9;
+    transition: 0.2s;
     cursor: pointer;
 }
 
 .friend__pic {
-    display: flex;
-    width: 10%;
-}
-
-.friend__pic > img {
-    object-fit: contain;
-}
-
-.friend__name {
+    height: 100%;
+    width: 19%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
-.friend__name > p {
-    color: gray;
-    margin-left: 20px;
+.friend > p {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.664);
 }
+
+
+

@@ -1,3 +1,4 @@
+import { Avatar } from '@material-ui/core';
 import React from 'react';
 import "../static/css/Friend.css";
 
@@ -5,11 +6,11 @@ const Friend = ({ friendName, pfp }) => {
     return (
         <div className="friend">
             <div className="friend__pic">
-                <img src={pfp} alt="friend_pic" />
+                <Avatar 
+                    src={pfp}
+                />
             </div>
-            <div className="friend__name">
-                <p>{friendName}</p>
-            </div>
+            <p>{friendName}</p>
         </div>
     )
 }

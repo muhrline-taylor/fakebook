@@ -25,10 +25,14 @@ import EventsSidebar from './EventsSidebar';
 import MemoriesSidebar from './MemoriesSidebar';
 import SavedSidebar from './SavedSidebar';
 import PagesSidebar from './PagesSidebar';
+import MarketplaceNew from './MarketplaceNew';
+import MarketplaceNewMain from './MarketplaceNewMain';
+import { changeMarketplaceItem, selectMarketplaceItem } from '../features/marketplaceItemSlice';
 
 const Main = () => {
     const dispatch = useDispatch();
     const sidebar = useSelector(selectSidebar);
+    const marketplaceItemSelected = useSelector(selectMarketplaceItem);
 
     useEffect(() => {
         if(localStorage.getItem("loggedInUser") === null){
@@ -41,6 +45,12 @@ const Main = () => {
             if(sidebar === ""){
                 dispatch(changeSidebar("feed"))
             }
+        }
+    })
+
+    useEffect(() => {
+        if(sidebar === "feed"){
+            dispatch(changeMarketplaceItem(""))
         }
     })
 
@@ -98,6 +108,11 @@ const Main = () => {
                         <PagesSidebar />
                         :""
                     }
+                    {
+                        sidebar === "marketplaceNew" ?
+                        <MarketplaceNew />
+                        :""
+                    }
                 </div>
 
                 <div className="main__bodyCenter">
@@ -144,6 +159,11 @@ const Main = () => {
                     {
                         sidebar === "pages" ?
                         <Pages />
+                        :""
+                    }
+                    {
+                        sidebar === "marketplaceNew" ?
+                        <MarketplaceNewMain />
                         :""
                     }
                 </div>

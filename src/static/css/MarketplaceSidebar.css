@@ -126,6 +126,11 @@
 }
 
 .marketplaceSidebar__body::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0);
+    border-radius: 18px;
+}
+
+.marketplaceSidebar:hover .marketplaceSidebar__body::-webkit-scrollbar-thumb {
     background-color: rgba(128, 128, 128, 0.637);
     border-radius: 18px;
 }

@@ -1,0 +1,47 @@
+.marketplaceNewMainLanding {
+    height: 31vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.marketplaceNewMainLanding__header {
+    width: 100%;
+    margin: 0 0 1% 0;
+}
+
+.marketplaceNewMainLanding__header > p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.marketplaceNewMainLanding__cards {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.marketplaceNewMainLanding__card {
+    width: 23%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.329);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.marketplaceNewMainLanding__card:hover {
+    background-color: #c9cbcf17;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.marketplaceNewMainLanding__cardMain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 6%;
+}
